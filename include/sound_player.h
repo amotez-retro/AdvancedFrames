@@ -2,7 +2,7 @@
 #define __SOUND_PLAYER_H__
 
 // SOUND
-#include "steel.h"
+#include "sound.h"
 /* allows turning on and off sound for the GBA altogether */
 volatile unsigned short* master_sound = (volatile unsigned short*) 0x4000084;
 /* has various bits for controlling the direct sound channels */
@@ -51,7 +51,7 @@ int playSound() {
 	*dma1_control = 0;
 	*sound_control |= SOUND_A_RIGHT_CHANNEL | SOUND_A_LEFT_CHANNEL | SOUND_A_FIFO_RESET;
 	*master_sound = SOUND_MASTER_ENABLE;
-	*dma1_source = (unsigned int) steel;
+	*dma1_source = (unsigned int) sound;
 	*dma1_destination = (unsigned int) fifo_buffer_a;
 	*dma1_control = DMA_DEST_FIXED | DMA_REPEAT | DMA_32 | DMA_SYNC_TO_TIMER | DMA_ENABLE;
 	int sample_rate = 8000;

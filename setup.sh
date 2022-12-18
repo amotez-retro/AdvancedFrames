@@ -14,6 +14,7 @@ chmod +x run.sh
 # Create directories for output frames and audio
 mkdir -p ./working/frames
 mkdir -p ./working/audio
+mkdir resources
 
 # Install and build raw2gba
 curl -sL https://github.com/IanFinlayson/raw2gba/archive/refs/heads/master.zip -o working/raw2gba.zip && unzip working/raw2gba.zip -d working

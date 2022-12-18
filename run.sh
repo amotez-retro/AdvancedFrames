@@ -15,6 +15,7 @@ ffmpeg -y -ss 00:00:00 -to 00:30:00 -i $1 -acodec pcm_s8 -ac 1 -ar 8000 -f s8 wo
 # Create sound header with raw2gba
 echo "Convert pcm audio to header"
 ./working/raw2gba-main/raw2gba ./working/audio.raw
+cp .working/audio.h ./resources/sound.h
 
 # Run make
 make

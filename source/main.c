@@ -1,6 +1,6 @@
 #include "Intellisense.h"
 //#include "sound_player.h"
-#include "bitmap.h"
+#include "frames.h"
 #include "sound_player.h"
 
 #include "gba_bios.h"
