@@ -1,0 +1,7 @@
+build/*
+working/*
+resources/*
+
+AdvancePlay.elf
+AdvancePlay.gba
+AdvancePlay.sav
