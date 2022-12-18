@@ -9,7 +9,7 @@ if [ -f /etc/lsb-release ]; then
 fi
 
 # Make run script work
-chmod +X run.sh
+chmod +x run.sh
 
 # Create directories for output frames and audio
 mkdir -p ./working/frames
