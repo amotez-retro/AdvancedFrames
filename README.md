@@ -1,4 +1,4 @@
-# AdvancePlay
+# GBAFRAMES
 This repo aims to create an open source linux solution to convert video
 into a gba compatible format. 
 It utilizes ffmpeg to create the bitmap frames and pcm audio which is then encoded using various software. Video playback so far has some color issues and is limited in total time but is functional on real hardware.
@@ -14,7 +14,7 @@ Centos
 
 
 ## Running
- 
+ Download/clone the source and `cd GBAFrames` then
  
 `chmod +X setup.sh && setup.sh` 
 
@@ -31,9 +31,15 @@ Evan Murray: https://github.com/emurray2 for his music-gba software which this u
 Seriously though without these guys I wouldn't have even been able to prototype this - and especially not in just a few days!
 
 ## Goals
-First and foremost I would like longer playback. I think this can be achieved using things such as lz77, chroma subsampling, lowering resolution(during build)+upscaling(by gba), and potentially a lower sample rate for audio.
+First and foremost I would like longer playback. I think this can be achieved using things such as lz77, chroma subsampling, lowering resolution(during build)+upscaling(by console), and potentially a lower sample rate for audio.
 
 Next I'd like to make this a standalone cross-platform application that is super easy to use.
 
 ## Contibuting
-Not sure this is even necessary but certainly put in pull requests. Anyone who wants to contribute better algorithms/features/whatever please do!
+If you have something cool or useful you'd like to add put in pull requests. 
+Anyone who wants to contribute better algorithms/features/whatever (assuming it isn't copyright in some way) please do!
+
+## Info
+This project is not affiliated, endorsed by, produced by or in any way associated with Nintendo. 
+
+Any usage of this project or any outcome produced by this project including software, source, output, binaries, executables, or any other thing generated as a result of this project; or by any software used in this build chain is done without any liability to devlopers, coders, maintainers, or any other entity with affiliation to this project. This project assumes any users/entities will use it only for legal purposes as defined by law in whatever juridiction the project, software, executables, or other outputs is/are used. 
