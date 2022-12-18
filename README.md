@@ -4,19 +4,23 @@ into a gba compatible format.
 It utilizes ffmpeg to create the bitmap frames and pcm audio which is then encoded using various software. Video playback so far has some color issues and is limited in total time but is functional on real hardware.
 
 ## Required installs before this will work
-Linux (Ubuntu/Debian/Centos). This is only for linux currently. I've only tested on debian but it should work on centos.
+Linux (Ubuntu/Debian/Centos). This is only for linux currently. I've only tested on debian but it should work on centos. This should be handled in the setup.sh
 
-Debian/Ubuntu
-`sudo apt install cimg-dev ffmpeg`
+You need to have the gba devkitpro tools installed and working first and foremost.
+See https://devkitpro.org/wiki/Getting_Started#Unix-like_platforms for instructions
 
-Centos
-`sudo yum install cimg-dev ffmpeg`
+You also need cimg and ffmpeg installed on your machine. These will be installed in the setup.sh script for both Debian/Ubuntu and Centos. 
 
+
+## Setup
+Download/clone the source and go to the GBAFrames directory:
+
+`cd GBAFrames` then run
+
+`chmod +X setup.sh && ./setup.sh`
 
 ## Running
- Download/clone the source and `cd GBAFrames` then
- 
-`chmod +X setup.sh && setup.sh` 
+`run.sh /path/to/input.mp4`
 
 
 ## Credits
