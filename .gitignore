@@ -2,6 +2,6 @@ build/*
 working/*
 resources/*
 
-AdvancePlay.elf
-AdvancePlay.gba
-AdvancePlay.sav
+GBAFrames.elf
+GBAFrames.gba
+GBAFrames.sav

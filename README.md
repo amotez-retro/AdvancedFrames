@@ -25,7 +25,7 @@ Ensure you are in the GBAFrames directory and run the following:
 
 Convert video to bitmap frames. In this case from 0 to 30 seconds of the input.
 
-`ffmpeg -ss 00:00:00 -to 00:0:30 -i <path/to/input.mp4> -r 10/1 -vf scale=240:160,setsar=1:1 -q:v 2 working/frames/output%03d.bmp`
+`ffmpeg -ss 00:00:00 -to 00:00:30 -i <path/to/input.mp4> -r 10/1 -vf scale=240:160,setsar=1:1 -q:v 2 working/frames/output%03d.bmp`
 
 Use rgb2gba which was built in the setup step above to convert frames to a c header file
 
@@ -41,7 +41,7 @@ Convert pcm audio to header
 
 `./working/raw2gba audio.raw`
 
-`mv ./audio.h ./resources/sound.h`
+`mv ./audio.h ./resources/audio.h`
 
 
 Then run make to compile everything
