@@ -8,8 +8,8 @@ ffmpeg -t 30 -i "$1" -nostdin -r 10/1 -vf scale=240:160,setsar=1:1 -q:v 2 workin
 
 # Run frames through rgb2gba and redirect to frames.h
 echo "Convert frames from bmp to header"
-framescmd='./working/rgb2gba ./working/frames >> resources/frames.h'
-eval $framescmd
+./working/rgb2gba ./working/frames
+mv frames.h resources/frames.h
 
 # Generate pcm audio from input with ffmpeg
 echo "Generate pcm audio with ffmpeg"

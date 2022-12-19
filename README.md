@@ -29,7 +29,9 @@ Convert video to bitmap frames. In this case from 0 to 30 seconds of the input.
 
 Use rgb2gba which was built in the setup step above to convert frames to a c header file
 
-`./working/rgb2gba ./working/frames > resources/frames.h`
+`./working/rgb2gba ./working/frames`
+
+`mv frames.h resources/frames.h`
 
 Generate pcm audio with ffmpeg
 
