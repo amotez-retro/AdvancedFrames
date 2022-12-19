@@ -17,7 +17,7 @@ Download/clone the source and go to the GBAFrames directory:
 
 `cd GBAFrames` then run
 
-`chmod +X setup.sh && ./setup.sh`
+`chmod +x setup.sh && ./setup.sh`
 
 ## Running
 There is a run.sh script but for now manual commands are required.
