@@ -24,16 +24,20 @@ There is a run.sh script but for now manual commands are required.
 Ensure you are in the GBAFrames directory and run the following:
 
 Convert video to bitmap frames. In this case from 0 to 30 seconds of the input.
+
 `ffmpeg -ss 00:00:00 -to 00:30:00 -i <path/to/input.mp4> -r 10/1 -vf scale=240:160,setsar=1:1 -q:v 2 working/frames/output%03d.bmp`
 
 Use rgb2gba which was built in the setup step above to convert frames to a c header file
+
 `./working/rgb2gba ./working/frames > resources/frames.h`
 
 Generate pcm audio with ffmpeg
+
 `ffmpeg -ss 00:00:00 -to 00:30:00 <path/to/input.mp4> -y -acodec pcm_s8 -ac 1 -ar 8000 -f s8 working/audio/audio.raw`
 
 Convert pcm audio to header
-./working/raw2gba ./working/audio/audio.raw
+
+`./working/raw2gba ./working/audio/audio.raw`
 
 Then run make to compile everything
 `make`
