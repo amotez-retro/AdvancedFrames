@@ -13,13 +13,12 @@ mv frames.h resources/frames.h
 
 # Generate pcm audio from input with ffmpeg
 echo "Generate pcm audio with ffmpeg"
-ffmpeg -t 30 -i "$1" -nostdin -y -acodec pcm_s8 -ac 1 -ar 8000 -f s8 working/audio/audio.raw
+ffmpeg -t 30 -i "$1" -nostdin -y -acodec pcm_s8 -ac 1 -ar 8000 -f s8 audio.raw
 
 # Create sound header with raw2gba
 echo "Convert pcm audio to header"
-./working/raw2gba ./working/audio/audio.raw
-#mv ./working/audio/audio.h ./working/audio/audio.h
-cp ./working/audio/audio.h ./resources/sound.h
+./working/raw2gba audio.raw
+mv audio.h ./resources/audio.h
 
 # Run make
 make
