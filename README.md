@@ -1,4 +1,4 @@
-# GBAFRAMES
+# AdvancedFRAMES
 This repo aims to create an open source linux solution to convert video into a gba compatible format. 
 It utilizes ffmpeg to create the bitmap frames and pcm audio which is then encoded using various software. Video playback so far has some color issues and is limited in total time but is functional on real hardware.
 
